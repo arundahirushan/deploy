@@ -26,8 +26,11 @@ export const getItemById = async (req, res) => {
 export const createItem = async (req, res) => {
   try {
     const newItem = await Item.create(req.body);
-    res.status(201).json({messsage: "this part ran"},newItem
-    );
+
+    res.status(201).json({
+      message: "Item created successfully",
+      item: newItem,
+    });
   } catch (error) {
     res.status(400).json({
       message: "Failed to create item",
