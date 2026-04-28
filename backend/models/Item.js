@@ -29,6 +29,7 @@ const itemSchema = new mongoose.Schema(
     },
       coupon: {
       type: String,
+      default: "",
       trim: true,
     },
   },
